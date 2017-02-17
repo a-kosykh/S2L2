@@ -57,7 +57,11 @@ int main()
     for (unsigned int i = 0; i< n; ++i) ppA[i]->print();
     for (unsigned int i = 0; i< n; ++i) SumPrice += ppA[i]->getDollPrice(dollar);
     cout << "\nSummary price in dollar: " << SumPrice << endl;
-    for (unsigned int i = 0; i< n; ++i) delete[]ppA[i];
+        for (unsigned int i = 0; i< n; ++i)
+    {
+        delete[]ppA[i];
+    }
+    delete[]ppA;
 
 
     return 0;
